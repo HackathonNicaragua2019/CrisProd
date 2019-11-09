@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
-export default class AnatomyExample extends Component {
-  render() {
-    return (
-      <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Text>
-            This is Content Section
-          </Text>
-        </Content>
-        <Footer>
-          <FooterTab>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
-    );
-  }
+import React from 'react'
+import {createAppContainer} from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import Home from './modules/home' 
+import Login from './modules/login'
+import Registro from './modules/registro'
+import { Dimensions} from 'react-native'
+
+
+const WIDTH =Dimensions.get("window").width;
+const Drawerconfig={
+  drawerWidth:WIDTH*0.50,
 }
+const DrawerNavigator=createDrawerNavigator({
+  
+  Home:{
+    screen:Home,
+    
+  },
+  
+  Login:{
+    screen: Login,
+  },
+  Registro:{
+    screen: Registro
+  },
+  
+ },
+ Drawerconfig
+);
+export default createAppContainer(DrawerNavigator)
