@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Rs_P",
-    "slug": "RS_P",
+    "name": "crisprod",
+    "slug": "proyecto52",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -13,7 +13,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -28,3 +28,4 @@
     }
   }
 }
+
