@@ -8,6 +8,10 @@ import Princ from '../../extra/Princ';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 
+
+
+
+
 const AppNav = createBottomTabNavigator({
   Princ:{
     screen: Princ, 

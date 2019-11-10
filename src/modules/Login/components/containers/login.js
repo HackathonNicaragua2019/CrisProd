@@ -58,6 +58,7 @@ register= () => {
           <Body>
             <Title>Iniciar Sesión</Title>
           </Body>
+
           <Right />
           
         </Header>

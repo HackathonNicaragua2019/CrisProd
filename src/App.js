@@ -1,7 +1,8 @@
 import React from 'react'
 import {createAppContainer} from 'react-navigation'
+import {ScrollView, Text, View, StyleSheet, Image} from 'react-native'
 
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 
 //createDrawerNavigator(RouteConfigs, DrawerNavigatorConfig);
 import Login from './modules/Login/components/containers/login'
@@ -12,14 +13,22 @@ import Cultivos from './app cultivo'
 import { Dimensions} from 'react-native'
 import * as firebase from 'firebase';
 
-// Initialize Firebase
+//import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyAvvbN6gPSwt_HrnYU1nN8wsYayZ9kygtc",
   authDomain: "prueba-1-93c7b",
   databaseURL: "https://prueba-1-93c7b.firebaseio.com",
   storageBucket: "prueba-1-93c7b.appspot.com"
 };
+
 firebase.initializeApp(firebaseConfig);
+
+
+import Slidebar from "./slidebar"
+import home from './modules/Login/components/containers/home';
+
 
 
 
@@ -28,9 +37,11 @@ const Drawerconfig={
   drawerWidth:WIDTH*0.50,
 }
 const DrawerNavigator=createDrawerNavigator({
-  Home:{
-    screen:Home,
+
+    
   
+  Home:{
+    screen: Home
   },
   Cultivos:{
     screen: Cultivos
@@ -45,6 +56,10 @@ const DrawerNavigator=createDrawerNavigator({
     screen: Ajuste
   }
  },
- Drawerconfig
+ 
+{
+  contentComponent:props=><Slidebar{...props}/>,
+  Drawerconfig
+}
 );
 export default createAppContainer(DrawerNavigator)
