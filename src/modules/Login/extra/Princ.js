@@ -1,9 +1,12 @@
 import React,{Component} from 'react';
 import { View, StyleSheet, ScrollView} from 'react-native';
-import {Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon, InputGroup } from 'native-base';
-
+import { CardItem,Card,Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon, InputGroup } from 'native-base';
+import { createAppContainer } from 'react-navigation';
 
 export default class Princ extends Component {
+
+ 
+
     Menu= () => {
       this.props.navigation.navigate('Menu')}
    
@@ -19,11 +22,16 @@ export default class Princ extends Component {
             </Left>
             <Body>
               <Title>Inicio</Title>
-                            
+              <InputGroup>
+              <Icon name='ios-search'/>
+              <Input placeholder ='Buscar'/>
+              </InputGroup>
+              
+              
             </Body>
             <Right>
             <Button transparent>
-                <Icon name ='search'/>
+                <Text>Buscar</Text>
               </Button>
             </Right>
           </Header>
