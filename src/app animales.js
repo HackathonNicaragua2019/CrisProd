@@ -1,10 +1,7 @@
 import React from 'react'
 import {createAppContainer} from 'react-navigation'
 import { createDrawerNavigator } from 'react-navigation-drawer';
-import Home from './modules/home' 
-import Login from './modules/login'
-import Registro from './modules/registro'
-import Criar from './app animales'
+import Cerdos from './animales/cerdos'
 import { Dimensions} from 'react-native'
 
 
@@ -14,20 +11,11 @@ const Drawerconfig={
 }
 const DrawerNavigator=createDrawerNavigator({
   
-  Home:{
-    screen:Home,
+  Cerdos:{
+    screen:Cerdos,
     
   },
   
-  Login:{
-    screen: Login,
-  },
-  Registro:{
-    screen: Registro
-  },
-  Criar:{
-    screen: Criar
-  }
   
  },
  Drawerconfig

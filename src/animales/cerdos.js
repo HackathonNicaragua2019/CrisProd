@@ -6,6 +6,8 @@ import {Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, 
 export default class Princ extends Component {
     Menu= () => {
       this.props.navigation.navigate('Menu')}
+      home= () => {
+        this.props.navigation.navigate('Home')}
    
     render() {
       
@@ -14,18 +16,14 @@ export default class Princ extends Component {
           <Header transparent searchBar rounded style={styles.tema} >
             <Left>
               <Button transparent>
-                <Icon name='menu' size={50} onPress={()=>this.props.navigation.toggleDrawer()}/>
+                <Icon name='menu' size={50} onPress={this.home}/>
               </Button>
             </Left>
             <Body>
-              <Title>Inicio</Title>
+              <Title>Cerdos</Title>
                             
             </Body>
-            <Right>
-            <Button transparent>
-                <Icon name ='search'/>
-              </Button>
-            </Right>
+           
           </Header>
           <Content style={{backgroundColor:"#d4d5d5"}}>
             <ScrollView>
@@ -96,9 +94,7 @@ export default class Princ extends Component {
     color:'white',
   
   },
-  
     
   }
   
   )
-  
