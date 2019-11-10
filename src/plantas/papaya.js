@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Tomates</Title>
           </Body>
 
           <Right />
@@ -32,12 +32,12 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter} style ={{fontSize:22}}>Para obtener las mejores condiciones para el crecimiento de su papaya en su jardín, no olvide elegir bien el lugar de la plantación. </Text>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
+             <Image source={require('../../assets/papaya.jpg')}style={styles.imagen}/>
             
               
             </Item>

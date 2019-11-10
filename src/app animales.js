@@ -1,9 +1,16 @@
 import React from 'react'
 import {createAppContainer} from 'react-navigation'
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import Animales from './layouts/animalesg'
+import Gallinas from './animales/gallina'
 import Cerdos from './animales/cerdos'
-import { Dimensions} from 'react-native'
+import Pollos from './animales/pollo'
 
+import { createDrawerNavigator } from 'react-navigation-drawer';
+
+//createDrawerNavigator(RouteConfigs, DrawerNavigatorConfig);
+import Slidebar from "./slidebar"
+
+import { Dimensions} from 'react-native'
 
 const WIDTH =Dimensions.get("window").width;
 const Drawerconfig={
@@ -11,13 +18,25 @@ const Drawerconfig={
 }
 const DrawerNavigator=createDrawerNavigator({
   
-  Cerdos:{
-    screen:Cerdos,
-    
-  },
-  
-  
+Animales:{
+  screen: Animales
+
+},
+Gallinas:{
+  screen:Gallinas
+},
+Cerdos:{
+  screen: Cerdos
+},
+Pollos:{
+  screen:Pollos
+},
+
+
+ 
  },
+ {contentComponent:props=><Slidebar{...props}/>,
  Drawerconfig
+}
 );
 export default createAppContainer(DrawerNavigator)

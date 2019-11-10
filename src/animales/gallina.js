@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Gallinas Ponedoras</Title>
           </Body>
 
           <Right />
@@ -32,12 +32,12 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
+             <Image source={require('../../assets/gallina.jpg')}style={styles.imagen}/>
             
               
             </Item>
@@ -72,8 +72,8 @@ const styles=StyleSheet.create({
     
   }, 
   imagen:{
-    width:50,
-    height:50,
+    width:70,
+    height:70,
   }
 
   

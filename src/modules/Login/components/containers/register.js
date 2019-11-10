@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Alert} from 'react-native'
+import { StyleSheet, Alert, KeyboardAvoidingView} from 'react-native'
 import { Icon,Title,Right, Left, Input, Item,Container, Header, Button, Content, Card, CardItem, Text, Body } from 'native-base';
 import * as firebase from 'firebase';
 
@@ -11,7 +11,6 @@ constructor(props){
   this.state=(
     {
       email:'',
-   //   user:'',
       password:''
     }
   )
@@ -53,7 +52,9 @@ catch(error){
           <Right />
         </Header>
         <Content padder contentContainerStyle={styles.content}>
+        <KeyboardAvoidingView style={styles.content} behavior="padding" enabled>
           <Card>
+          
             <CardItem header bordered>
               <Text style={styles.textCenter}>Registro</Text>
        
@@ -73,18 +74,26 @@ catch(error){
             </Item>
             <Item floatingLabel last>
             <Icon name='key' size={20} ></Icon>
-              <Input placeholder='Contraseña' onChangeText={(password)=>this.setState({password})}/>
+              <Input secureTextEntry={true} placeholder='Contraseña' onChangeText={(password)=>this.setState({password})}/>
             </Item>
               </Body>
             </CardItem>
             <CardItem footer bordered>
-            <Button rounded success style={styles.boton }onPress={()=>this.signUpuser(this.state.email, this.state.password)}>
+            <Button full success onPress={()=>this.signUpuser(this.state.email, this.state.password)}>
             <Text>Registrarse</Text>
           </Button >
           
+          
            
             </CardItem>
+            
+            <Text style={{textAlign: 'center'}}>O</Text>
+            
+            <Button full danger >
+            <Text>Registrarse con gmail</Text>
+          </Button >
           </Card>
+          </KeyboardAvoidingView>
         </Content>
       </Container>
     );

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import { View, StyleSheet, ScrollView} from 'react-native';
-import { CardItem,Card,Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon, InputGroup } from 'native-base';
+import { View, StyleSheet, ScrollView, Image,} from 'react-native';
+import { CardItem,Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon,Card, InputGroup } from 'native-base';
 import { createAppContainer } from 'react-navigation';
 
 export default class Princ extends Component {
@@ -35,10 +35,41 @@ export default class Princ extends Component {
               </Button>
             </Right>
           </Header>
-          <Content style={{backgroundColor:"#d4d5d5"}}>
+          <Content style={{backgroundColor:"#bbe8ff"}}>
             <ScrollView>
+              <View style={{alignItems:'center'}}>
+                <Text style={{fontWeight:'bold', fontSize:19, marginTop:30}}>Bienvenidos a Crisprod</Text>
+              </View>
+              <View style={{alignItems:'center'}}>
+              <Image style={{width:180, height:162, marginTop:30}} source={require('../../../../assets/Logoc.png')} />
+              </View>
+              <View style={{alignItems:'center'}}>
+                <Text style={{fontWeight:'bold', fontSize:18, marginTop:30}}>Eres capaz de Emprender!!!</Text>
+              </View>
+              <View><Card style={{marginLeft:18,marginRight:10, marginTop:20}}>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Paso 1:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Toca el boton superior izquierdo para abrir el menu desplegable.</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Paso 2:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Escoge la actividad que deseas realizar(Siembra o Crianza).</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Paso 3:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Escoge la planta o animal que desea.</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Paso 4:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Sigue los consejos paso a paso de la aplicacion.</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Paso 5: </Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}> Conectate con los diferentes organismos y vende tu producto.</Text>
+                </CardItem>
+                </Card></View>
 
-          </ScrollView>
+            </ScrollView>
         </Content>
         <View style={styles.linea}></View>
         </Container>

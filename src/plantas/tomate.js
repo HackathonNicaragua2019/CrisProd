@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Tomates</Title>
           </Body>
 
           <Right />
@@ -32,12 +32,12 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter} style ={{fontSize:22}}>El tomate es en realidad una fruta, aunque la mayoría de la gente considera que es un vegetal. De hecho, el tomate es la fruta más popular del mundo. Su diversidad es un factor importante en su popularidad.</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
+             <Image source={require('../../assets/tomate.jpg')}/>
             
               
             </Item>

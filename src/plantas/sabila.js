@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Zabila</Title>
           </Body>
 
           <Right />
@@ -32,12 +32,12 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter} style ={{fontSize:22}}>•	Si deseas trasplantar una planta joven (o plantón) que crece en la base de una planta más vieja, lee la sección de propagación.</Text>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
+             <Image source={require('../../assets/zabila.jpg')}/>
             
               
             </Item>

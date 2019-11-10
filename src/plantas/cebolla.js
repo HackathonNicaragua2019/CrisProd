@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Tomates</Title>
           </Body>
 
           <Right />
@@ -32,13 +32,15 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter}style={{fontSize:'23'}}> Las cebollas necesitan suelos buenos y ricos para desarrollarse. Prefieren los suelos franco arenosos, la turba y el limo rechazan los suelos arcillos y arenosos.</Text>/>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
-            
+             <Image source={require('../../assets/cebolla.jpg')} style={styles.imagen}/>
+             <Text style={{fontSize:23}}>
+             Las cebollas necesitan suelos buenos y ricos para desarrollarse. Prefieren los suelos franco arenosos, la turba y el limo rechazan los suelos arcillos y arenosos.
+             </Text>
               
             </Item>
               </Body>
@@ -68,9 +70,8 @@ const styles=StyleSheet.create({
     backgroundColor:'#a2c04e',
     marginTop:24.5,
     height: 80,
-
     
-  }, 
+  },
   imagen:{
     width:50,
     height:50,

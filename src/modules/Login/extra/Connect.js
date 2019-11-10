@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { View, StyleSheet, ScrollView, Image} from 'react-native';
+import { View, StyleSheet, ScrollView} from 'react-native';
 import { CardItem,Card,Input,Title,Header,Container, Content, Footer, FooterTab, Button, Left, Right, Body, Text, Icon, InputGroup } from 'native-base';
 import { createAppContainer } from 'react-navigation';
 
@@ -37,12 +37,28 @@ export default class Princ extends Component {
           </Header>
           <Content style={{backgroundColor:"#bbe8ff"}}>
             <ScrollView>
-            <View style={{alignItems:'center'}}>
-              <Image style={{width:180, height:162, marginTop:150}} source={require('../../../../assets/oops.jpg')} />
-              </View>
-              <View style={{alignItems:'center'}}>
-                <Text style={{fontWeight:'bold', fontSize:18, marginTop:30}}>En construccion</Text>
-              </View>
+            <View><Card style={{marginLeft:18,marginRight:10, marginTop:20}}>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Funica:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Telefono: 2276-1313 Correo:funica@ibw.com.ni</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Funide:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Telefono: 2270-6490 Correo: info@funides.com</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>UNAG:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Telefono:  2346-2280 Correo: unag@unag.org.ni</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Cosep:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Telefono: 2276-3333 Correo: relacionespublicas@cosep.org.ni</Text>
+                </CardItem>
+                <CardItem>
+                <Text style={{ fontSize:14, marginTop:5,fontWeight:'bold'}}>Mefca:</Text>
+                <Text style={{ fontSize:14, marginTop:5,marginLeft:20,marginRight:20}}>Telefono:8710-1518  Correo:lrivera@economiafamiliar.gob.ni</Text>
+                </CardItem>
+                </Card></View>
           </ScrollView>
         </Content>
         <View style={styles.linea}></View>

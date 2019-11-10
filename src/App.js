@@ -6,10 +6,11 @@ import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 
 //createDrawerNavigator(RouteConfigs, DrawerNavigatorConfig);
 import Login from './modules/Login/components/containers/login'
-import Register from './modules/Login/components/containers/register'
-import Home from './modules/Login/components/containers/home'
+import Registro from './modules/Login/components/containers/register'
+import Inicio from './modules/Login/components/containers/home'
 import Ajuste from './modules/Login/components/containers/config'
 import Cultivos from './app cultivo'
+import Crianza from './/app animales'
 import { Dimensions} from 'react-native'
 import * as firebase from 'firebase';
 
@@ -27,7 +28,7 @@ firebase.initializeApp(firebaseConfig);
 
 
 import Slidebar from "./slidebar"
-import home from './modules/Login/components/containers/home';
+//import home from './modules/Login/components/containers/home';
 
 
 
@@ -40,17 +41,20 @@ const DrawerNavigator=createDrawerNavigator({
 
     
   
-  Home:{
-    screen: Home
+  Inicio:{
+    screen: Inicio
   },
   Cultivos:{
     screen: Cultivos
   },
+  Crianza:{
+    screen:Crianza
+  },
   Login:{
     screen: Login,
   },
-  Register:{
-    screen: Register
+  Registro:{
+    screen: Registro
   },
   Ajuste: {
     screen: Ajuste
@@ -58,6 +62,7 @@ const DrawerNavigator=createDrawerNavigator({
  },
  
 {
+  initialRouteName:"Inicio",
   contentComponent:props=><Slidebar{...props}/>,
   Drawerconfig
 }

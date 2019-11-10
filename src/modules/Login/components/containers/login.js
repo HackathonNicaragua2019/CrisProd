@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet} from 'react-native'
-import * as Facebook from 'expo-facebook';
+import { StyleSheet, KeyboardAvoidingView} from 'react-native'
 import * as firebase from 'firebase';
 import {FontAwesome, Entypo} from '@expo/vector-icons'
 import { Icon, Input, Item,Container, Header, Button, Content, Card, CardItem, Text, Body,Left,Title, Right } from 'native-base';
@@ -49,12 +48,14 @@ register= () => {
   render() {
     return (
       <Container>
+        
          <Header style={styles.tema}>
         <Left>
             <Button transparent>
               <Icon name='ios-arrow-back' onPress={this.home}/>
             </Button>
           </Left>
+          
           <Body>
             <Title>Iniciar Sesión</Title>
           </Body>
@@ -62,7 +63,9 @@ register= () => {
           <Right />
           
         </Header>
+        
         <Content padder contentContainerStyle={styles.content}>
+        <KeyboardAvoidingView style={styles.content} behavior="padding" enabled>
           <Card>
             <CardItem header bordered>
               <Text style={styles.textCenter}>Inicio de sesion</Text>
@@ -76,7 +79,7 @@ register= () => {
             </Item>
             <Item floatingLabel last>
             <Icon active name='lock' size={20} ></Icon>
-              <Input placeholder='Contraseña' onChangeText={(password)=>this.setState({password})}/>
+              <Input secureTextEntry={true} placeholder='Contraseña' onChangeText={(password)=>this.setState({password})}/>
             </Item>
               </Body>
             </CardItem>
@@ -90,7 +93,10 @@ register= () => {
               </Button>
             </CardItem>
           </Card>
+          </KeyboardAvoidingView>
         </Content>
+        
+        
       </Container>
     );
   }

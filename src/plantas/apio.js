@@ -22,7 +22,7 @@ register= () => {
             </Button>
           </Left>
           <Body>
-            <Title>Cerdos</Title>
+            <Title>Apio</Title>/Title>
           </Body>
 
           <Right />
@@ -32,12 +32,12 @@ register= () => {
           <ScrollView>
           <Card>
             <CardItem header bordered>
-              <Text style={styles.textCenter} style ={{fontSize:22}}>Un gallo sólo se necesita si usted cría pollos para aprovechar su carne.</Text>  
+              <Text style={styles.textCenter} style ={{fontSize:22}}> Son numerosos los usos del apio en la cocina debido a todas propiedades de este vegetal que puede echarnos una mano en diversas afecciones o a la hora de perder peso.          </Text>
             </CardItem>
             <CardItem bordered>
               <Body>
            <Item>
-             <Image source={require('../../assets/cerdo.jpg')}style={styles.imagen}/>
+             <Image source={require('../../assets/apio.jpg')}style={styles.imagen}/>
             
               
             </Item>
@@ -54,7 +54,7 @@ register= () => {
 const styles=StyleSheet.create({
   textCenter :{
     textAlign : 'center',
-    width : '100%'
+    width : '100s%'
   },
   content:{
     flex:1,
